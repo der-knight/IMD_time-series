@@ -39,15 +39,3 @@ ds=df.groupby(['time']).mean()
 ds.plot()
 
 
-# In[ ]:
-
-
-import numpy as np
-df1=ds.to_dataframe()
-
-for val in df1['tmax']:
-    if(val>90):
-        df1['t']=0
-    else:
-        df1['t']=val
-
